@@ -9,7 +9,7 @@
 
         $res = mysqli_query($mysql, $sql);
 
-        $resmysql = mysql_fetch_assoc($res);//查询MySQL数据返回一个数组;
+        $resmysql =mysqli_fetch_assoc($res);//查询MySQL数据返回一个数组;
 
         $result = array();//创建一个result的数组
 
