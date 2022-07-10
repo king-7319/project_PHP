@@ -7,7 +7,7 @@
 
         $sql = "select * from userlogin where username='$username' and userpwd='$userpwd'";
 
-        $res = mysqli_query($mysql, $sql);
+        $res = mysqli_query($conn, $sql);
 
         $resmysql =mysqli_fetch_assoc($res);//查询MySQL数据返回一个数组;
 

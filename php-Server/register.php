@@ -6,15 +6,14 @@
     $phone=$_POST['phone'];//手机号
     $email=$_POST['email'];//邮箱地址
     //查询语句
-    $sql = "insert into `user`(username,userpwd,phone,email) value('$username','$userpwd','$phone',$email)";
-    $res=mysqli_query($mysql,$sql);//连接MySQL数据库，查询
+    $sql = "insert into userlogin(username,userpwd,phone,email) value('$username','$userpwd','$phone','$email')";
+    $res=mysqli_query($conn,$sql);//连接MySQL数据库，查询
 
     $result=array();//创建一个存放数据的数组
 
     if($res){
-        $rows=mysqli_affected_rows($mysql);
+        $rows=mysqli_affected_rows($conn);
         if($rows>0){
-//          $result['status'] = true;
             $result['code']=0;
             $result['msg']='注册成功';
         }else{
